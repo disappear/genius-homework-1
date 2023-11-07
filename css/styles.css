@@ -48,6 +48,10 @@
 }
 
 /* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-primary-dark);
   font-family: Roboto, sans-serif;
@@ -56,12 +60,61 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
 address {
   font-style: normal;
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 56px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-social-link {
+  display: flex;
+  gap: 32px;
 }
 
 /* Navigation */
@@ -72,7 +125,6 @@ ul {
 
 .nav-link:hover {
   color: var(--color-brand);
-  font-weight: 700;
 }
 
 /* Hero Section */
@@ -80,9 +132,17 @@ ul {
   color: var(--color-brand);
   font-family: Play, sans-serif;
   font-size: 140px;
+  line-height: 0.8;
+}
+
+.hero-text-content {
+  padding: 124px 0;
+  max-width: 500px;
 }
 
 .button {
+  margin-bottom: 14px;
+  padding: 20px 40px;
   color: var(--color-primary-light);
   background-color: var(--color-brand);
   border: none;
@@ -93,6 +153,8 @@ ul {
 .under-button-info {
   color: var(--color-secondary-dark);
   font-size: 12px;
+  text-align: center;
+  max-width: 200px;
 }
 
 /* About Us Section */
@@ -101,10 +163,28 @@ ul {
   font-family: Play, sans-serif;
   font-size: 64px;
   font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 48px;
 }
 
 .accent {
   color: var(--color-brand);
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.about-us-content {
+  max-width: 710px;
+}
+
+.about-us-title {
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .about-us-text {
@@ -115,11 +195,51 @@ ul {
   font-weight: 600;
 }
 
-/* Procedures */
+/* Why Us section */
+.why-us-title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+}
+
+.why-us-list {
+  display: flex;
+  gap: 56px;
+}
+
+.why-us-card {
+  padding: 24px 32px;
+  background-color: var(--color-primary-light);
+  box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+  border-radius: 32px;
+}
+
+.why-us-text {
+  text-align: center;
+}
+
+/* Procedures section */
 .procedures-title {
   color: var(--color-primary-light);
   font-size: 22px;
   font-weight: 400;
+}
+
+.procedures-list {
+  display: flex;
+  gap: 16px;
+}
+
+.procedure-item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+.procedure-card {
+  padding: 372px 80px 32px 80px;
+  background-color: #011c44;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 120px;
+  text-align: center;
 }
 
 /* Contact */
